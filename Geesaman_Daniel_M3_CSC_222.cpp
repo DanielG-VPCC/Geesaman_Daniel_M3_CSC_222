@@ -2,8 +2,16 @@
 //
 
 #include <iostream>
+#include "Date.h"
+using namespace std;
+
+void setDate(int m, int day, int y);
 
 int main()
 {
     std::cout << "Hello World!\n";
+}
+void setDate(int m, int day, int y)
+{
+
 }
