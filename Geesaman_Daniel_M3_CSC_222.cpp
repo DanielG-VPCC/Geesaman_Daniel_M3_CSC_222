@@ -2,6 +2,8 @@
 //
 
 #include <iostream>
+#include "floatingPointArray.h"
+using namespace std;
 
 int main()
 {
