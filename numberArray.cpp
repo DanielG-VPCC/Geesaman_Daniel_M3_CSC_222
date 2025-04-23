@@ -8,27 +8,28 @@ int index = 0;
 
 numberArray::numberArray()
 {
-	values = new double[size];
 	size = MAX_SIZE;
+	values = new double[size];
 	for (int i = 0; i < size; i++)
 	{
-		values[i] = 0.0;
+		values[i] = 0;
 	}
 }
 
-numberArray::numberArray(int size)
+numberArray::numberArray(int s)
 {
+	size = s;
 	values = new double[size];
 	for (int i = 0; i < size; i++)
 	{
-		values[i] = 0.0;
+		values[i] = 0;
 	}
 }
 
 numberArray::~numberArray()
 {
 	delete []values;
-	cout << endl << "destructor operation complete" << endl;
+	cout << endl << "destructor operation complete" << endl << endl;
 	//print a message saying this function has run
 }
 
@@ -42,6 +43,7 @@ double numberArray::maxVal()
 			sentinelVal = values[i];
 		}
 	}
+	cout << "The maximum value in the array is: " << sentinelVal << endl;
 	return sentinelVal;
 }
 
@@ -55,6 +57,7 @@ double numberArray::minVal()
 			sentinelVal = values[i];
 		}
 	}
+	cout << "The minimum value in the array is: " << sentinelVal << endl;
 	return sentinelVal;
 }
 
@@ -67,6 +70,7 @@ double numberArray::avgVal()
 		totalNum = totalNum + values[i];
 	}
 	avgVal = (totalNum/size);
+	cout << "The average of the values in the array is: " << avgVal << endl;
 	return avgVal;
 }
 
@@ -80,18 +84,26 @@ void numberArray::printArray()
 
 void numberArray::setNumber(int index, double value)
 {
-
-}
-
-int numberArray::getNumber(int index)
-{
-	if (index < size)
+	if (index >= 0 && index < size)
 	{
-		return values[index];
+		values[index] = value;
 	}
 	else
 	{
 		cout << "invalid bound";
+	}
+}
+
+int numberArray::getNumber(int index)
+{
+	if (index >= 0 && index < size)
+	{
+		cout << "The value at " << index << " is: " << values[(index - 1)];
+		return 0;
+	}
+	else
+	{
+		cout << "The value at " << index << " is out of bounds, please choose another number";
 		return 0;
 	}
 }
