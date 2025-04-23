@@ -3,7 +3,6 @@
 using namespace std;
 
 int numberArray::MAX_SIZE = 10;
-int numberArray::DEF_VALUE = 0.0;
 int index = 0;
 
 numberArray::numberArray()
