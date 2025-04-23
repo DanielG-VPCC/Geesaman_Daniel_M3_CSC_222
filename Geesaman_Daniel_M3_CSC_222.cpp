@@ -2,10 +2,23 @@
 //
 
 #include <iostream>
-#include "floatingPointArray.h"
+#include <iomanip>
+#include "numberArray.h"
 using namespace std;
+
+void createArray();
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    cout << fixed << setprecision(1);
+    createArray();
+    //cout << "test 1" << endl;
+}
+
+void createArray()
+{
+    numberArray numberArray{};
+    //cout << "test 2" << endl;
+    numberArray.printArray();
+    //cout << "test 3" << endl;
 }

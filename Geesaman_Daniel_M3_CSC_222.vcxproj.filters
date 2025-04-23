@@ -18,5 +18,13 @@
     <ClCompile Include="Geesaman_Daniel_M3_CSC_222.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="numberArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="numberArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
